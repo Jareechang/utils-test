@@ -5,7 +5,7 @@ interface TodoData {
     userId: number;
 }
 
-export async const getData = () => {
+export const getData = async() => {
     return fetch('https://jsonplaceholder.typicode.com/todos/1')
         .then(response => response.json())
         .then(json => console.log(json))
